@@ -6,7 +6,10 @@
 
 <script>
     export default {
-        name: 'form-multiselect'
+        name: 'form-multiselect',
+        props: {
+            
+        }
     }
 </script>
 

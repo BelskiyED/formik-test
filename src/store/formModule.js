@@ -71,6 +71,7 @@ export const formModule = {
             const primaryCurrency = state.currencies.find(item => item.primary === true)
               if (primaryCurrency) {
                 commit('setSelectedCurrencies', [primaryCurrency.id])
+                console.log('ВЫБРАННЫЕ ВАЛЮТЫ:', state.output.selectedCurrencies)
               }
           })
           .catch(error => {
@@ -84,7 +85,7 @@ export const formModule = {
         commit('setStep', state.step - 1);
       },
       submitOutput({ state }) {
-        console.log(state.output);
+        console.table(state.output)
       },
     },
     namespaced: true
